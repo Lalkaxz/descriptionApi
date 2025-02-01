@@ -1,0 +1,19 @@
+{
+    "username": "lalkaxz",
+    "bio": "Developer with a focus on backend technologies and API development.",
+    "skills": [
+      "Go",
+      "PHP",
+      "Python",
+      "Node JS",
+      "REST API",
+      "CRUD operations",
+      "SQL"
+    ],
+    "contact": {
+      "email": null,
+      "website": null,
+      "location": null
+    }
+  }
+  
