@@ -1,7 +1,12 @@
 import fs from "fs";
 
-export default (path = "../description.json") => {
-    const jsonObj = JSON.parse(fs.readFileSync(path, 'utf8'));
+class jsonService { 
+  // Return .json file content.
+  getJsonData(path = "description.json") {
+    const jsonObj = JSON.parse(fs.readFileSync(path, 'utf-8'));
 
     return jsonObj
+  }
 }
+
+export default new jsonService

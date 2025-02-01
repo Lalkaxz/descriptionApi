@@ -1,22 +1,18 @@
 import express from "express";
-
+import router from "./src/router.js";
 const app = express()
-const port = 5584
-const hostname = "localhost"
 
-app.use()
+// Loading ENV values.
+process.loadEnvFile('.env')
+const PORT = process.env.PORT || 5584
+const HOSTNAME = process.env.HOSTNAME || "localhost"
+// Use router for this application.
+app.use("/", router)
 
-app.get("/", (req, res) => {
-    res.statusCode = 200
-    res.json()
-})
-
-app.use()
-
-app.listen(port, (err) => {
-    if (err) {
-        throw new Error(err)
-    }
-    console.log(`App listening on ${hostname}:${port}`)
+app.listen(PORT, (err) => {
+  if (err) {
+    throw new Error(err)
+  }
+  console.log(`App listening on ${HOSTNAME}:${PORT}`)
 })
 

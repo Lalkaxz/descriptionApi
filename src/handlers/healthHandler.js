@@ -1,3 +1,4 @@
 export default (req, res) => {
-    res.status(200).send("Try use /aboutme")
+  res.statusCode = 200
+  res.send("Try use /aboutme")
 }
